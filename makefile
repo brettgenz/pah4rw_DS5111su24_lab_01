@@ -24,6 +24,21 @@ pg17192.txt:
 2149-0.txt:
 	@wget https://www.gutenberg.org/files/2149/2149-0.txt
 
-# this runs all of the data processing tasks
+# this will run all of the data processing tasks
 data_processing:
-	@bash data_processing.sh	
+	@bash data_processing.sh
+
+raven_line_count:
+	@bash raven_line_count.sh
+
+raven_word_count:
+	@bash raven_word_count.sh
+
+raven_counts:
+	@bash raven_counts.sh
+
+total_lines:
+	@bash total_lines.sh
+
+total_words:
+	@bash total_words.sh	
