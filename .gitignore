@@ -1,2 +1,8 @@
-# ignore all text files
-*.txt
+# ignore downloaded book text files
+pg*.txt
+# ignore pycache files
+**/*__pycache__
+# ignore the env folder
+env/
+# ignore ipynb checkpoints
+.ipynb_checkpoints/
