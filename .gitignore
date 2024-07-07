@@ -1,8 +1,12 @@
 # ignore downloaded book text files
 pg*.txt
+932.txt
+1063.txt
+10031-0.txt
 # ignore pycache files
 **/*__pycache__
 # ignore the env folder
 env/
-# ignore ipynb checkpoints
+# ignore ipynb files and .ipynb_checkpoints
 .ipynb_checkpoints/
+#.ipynb
