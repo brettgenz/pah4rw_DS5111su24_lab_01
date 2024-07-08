@@ -22,12 +22,13 @@ log = logging.getLogger(__name__)
         # ("Le Corbeau", "./../pg14082.txt")
     ]
 )
-def test_clean_text(book_name, file_name):
+def test_tokenize_text(book_name, file_name):
     """
-    Given a string _text_ of text with content of each book in the list ...
-    When I pass _text_ to the clean_text() function ...
-    Then when I test that certain punctuation marks ',.;:' are not in the output for a given book, 
-    the test should pass.
+    Given a string _text_ of text with content of each book in the list which that has already been through the 
+    clean_text() function (i.e., has been converted to lowercase and had punctuation removed) ...
+    When I pass _text_ to the tokenize_text() function ...
+    Then the output for each book should be a list of at least length 5000 (the Cask of Amontillado is the
+    shortest with 5334 tokens) ...
     """
     
     book = book_name
@@ -36,16 +37,14 @@ def test_clean_text(book_name, file_name):
     with open(file_name, 'r') as file:
         text = file.read()
 
-        output = clean_text(text)
+        output = tokenize_text(clean_text(text))
     
         try:
-            assert ('[,.;:]' not in output), f"the punctuation marks ',.;:' appear in the clean_text() output for book {book}"
-            log.info(f"Test passed for book {book}: the punctuation marks ',.;:' do not appear in the output")
+            assert len(output) > 5000, f"tokenize_text() returned too few tokens for {book}"
+            log.info(f"Test passed for book {book}: tokenize_text() returned at least 5000 tokens")
         except AssertionError as e:
             log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
 if __name__ == '__main__':
-    
     pytest.main()
-	# test_clean_text(book_name, file_name)
