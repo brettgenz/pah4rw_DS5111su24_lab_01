@@ -47,5 +47,3 @@ def test_count_words(book_name, file_name):
 
 
 
-if __name__ == '__main__':
-    pytest.main()

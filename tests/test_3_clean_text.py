@@ -42,6 +42,4 @@ def test_clean_text():
     
 
 
-if __name__ == '__main__':
-    
-	test_clean_text()
+

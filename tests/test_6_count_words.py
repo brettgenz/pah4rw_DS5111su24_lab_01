@@ -39,5 +39,3 @@ def test_count_words():
 
 
 
-if __name__ == '__main__':
-    test_count_words()

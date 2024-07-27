@@ -30,6 +30,3 @@ def test_tokenize_text():
     log.info(f"Test 2 passed: tokenize_text() returned the correct number of tokens")
 
 
-if __name__ == '__main__':
-    
-    test_tokenize_text()

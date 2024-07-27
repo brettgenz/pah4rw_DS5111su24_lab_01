@@ -34,6 +34,3 @@ def test_tokenize_text():
         log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
-if __name__ == '__main__':
-    
-    test_tokenize_text()

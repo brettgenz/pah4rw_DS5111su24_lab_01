@@ -33,12 +33,9 @@ def test_tokenize_text():
     output = tokenize_text(clean_text(text))
     
     try:
-        assert len(output) == 69, f"tokenize_text() returned an incorrect number of tokens for the combined set of books"
+        assert len(output) == 69, f"tokenize_text() returned an incorrect number of tokens"
         log.info(f"Test passed: tokenize_text() returned the correct number of tokens")
     except AssertionError as e:
         log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
-if __name__ == '__main__':
-
-    test_tokenize_text()

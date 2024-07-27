@@ -36,7 +36,3 @@ def test_clean_text():
         log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
-if __name__ == '__main__':
-    
-    # pytest.main()
-	test_clean_text()

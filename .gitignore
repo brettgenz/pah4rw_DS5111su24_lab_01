@@ -5,8 +5,10 @@ pg*.txt
 10031-0.txt
 # ignore pycache files
 **/*__pycache__
+.pytest_cache
 # ignore the env folder
 env/
 # ignore ipynb files and .ipynb_checkpoints
 .ipynb_checkpoints/
-#.ipynb
+.ipynb
+.DS_Store

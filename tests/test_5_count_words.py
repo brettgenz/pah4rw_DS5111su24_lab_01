@@ -44,6 +44,3 @@ def test_count_words():
         log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
-
-if __name__ == '__main__':
-    test_count_words()

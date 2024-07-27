@@ -30,7 +30,3 @@ def test_count_words():
     assert output.get('raven') == 1, f"expected count of 1 but got {output.get('raven')}."
     log.info(f"Test 2 passed: count_words() counted the correct number of occurrences of the word 'raven'.")
 
-
-if __name__ == '__main__':
-    
-    test_count_words()

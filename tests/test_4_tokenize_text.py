@@ -46,5 +46,3 @@ def test_tokenize_text(book_name, file_name):
             log.info(f"Test failed: caught an assertion error with message: {e}")
 
 
-if __name__ == '__main__':
-    pytest.main()

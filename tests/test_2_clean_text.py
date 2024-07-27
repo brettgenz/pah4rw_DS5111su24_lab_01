@@ -36,6 +36,3 @@ def test_clean_text():
         log.info(f"Test 1 failed as expected, caught an assertion error as expected with message: {e}")
 
 
-if __name__ == '__main__':
-    
-	test_clean_text()
