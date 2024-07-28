@@ -1,7 +1,7 @@
 import os, logging, sys
 import subprocess
 
-relative_path = os.path.abspath('./../')
+relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
 from data_prep import *
@@ -12,7 +12,7 @@ logging.basicConfig(level = logging.INFO, stream = sys.stderr,
 
 log = logging.getLogger(__name__)
 
-with open('./../pg17192.txt', 'r') as file:
+with open('./pg17192.txt', 'r') as file:
     text = file.read()
 
 # keyword = 'raven'
@@ -35,7 +35,7 @@ def test_bash_vs_python_functions():
     Then I should get 46 instances of the word 'raven' for both methods.
     """
 
-    filename = './../pg17192.txt'
+    filename = './pg17192.txt'
 
     bash_command = f"cat {filename} | grep -i raven | wc -l"
     bash_output = run_bash_command(bash_command)

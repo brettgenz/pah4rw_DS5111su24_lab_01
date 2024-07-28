@@ -1,6 +1,6 @@
 import os, logging, sys
 
-relative_path = os.path.abspath('./../')
+relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
 from data_prep import *
@@ -24,11 +24,11 @@ def test_count_words():
     combined_text = ""
 
     books = [
-        "./../pg17192.txt",
-        "./../932.txt",
-        "./../1063.txt",
-        "./../10031-0.txt",
-        # "./../pg14082.txt"
+        "./pg17192.txt",
+        "./932.txt",
+        "./1063.txt",
+        "./10031-0.txt",
+        # "./pg14082.txt"
         ]
 
     for book in books:

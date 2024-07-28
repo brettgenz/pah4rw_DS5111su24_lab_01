@@ -1,7 +1,7 @@
 import os
 import logging, sys
 
-relative_path = os.path.abspath('./../')
+relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
 from data_prep import *
