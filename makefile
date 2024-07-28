@@ -9,8 +9,8 @@ update: env
 
 get_texts: book_Raven.txt book_FallHouseUsher.txt book_CaskAmontillado.txt book_Poems.txt book_LeCorbeau.txt
 
-test:
-	. env/bin/activate; get_texts; pytest -vvx tests
+test: get_texts
+	. env/bin/activate; pytest -vvx tests
 
 book_Raven.txt:
 	@wget https://www.gutenberg.org/cache/epub/17192/pg17192.txt
@@ -55,3 +55,6 @@ total_lines:
 
 total_words:
 	@bash total_words.sh	
+
+delete_texts:
+	@rm 10031-0.txt 1063.txt 932.txt pg14082.txt pg17192.txt
