@@ -7,6 +7,8 @@ env:
 update: env
 	. env/bin/activate; pip install -r requirements.txt
 
+test:
+	. env/bin/activate; pytest -vvx tests
 
 get_texts: book_Raven.txt book_FallHouseUsher.txt book_CaskAmontillado.txt book_Poems.txt book_LeCorbeau.txt
 # 1064-0.txt 51060-8.txt 50852-0.txt 32037.txt 2147-0.txt 2148-0.txt 2149-0.txt

@@ -1,7 +1,7 @@
 import os, logging, sys
 import pytest
 
-relative_path = os.path.abspath('./../')
+relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
 from data_prep import *
@@ -15,11 +15,11 @@ log = logging.getLogger(__name__)
 @pytest.mark.parametrize(
     "book_name, file_name",
     [
-        ("The Raven", "./../pg17192.txt"),
-        ("The Fall of the House of Usher", "./../932.txt"),
-        ("The Cask of Amontillado", "./../1063.txt"),
-        ("The Poems", "./../10031-0.txt"),
-        # ("Le Corbeau", "./../pg14082.txt")
+        ("The Raven", "./pg17192.txt"),
+        ("The Fall of the House of Usher", "./932.txt"),
+        ("The Cask of Amontillado", "./1063.txt"),
+        ("The Poems", "./10031-0.txt"),
+        # ("Le Corbeau", ".pg14082.txt")
     ]
 )
 def test_tokenize_text(book_name, file_name):
