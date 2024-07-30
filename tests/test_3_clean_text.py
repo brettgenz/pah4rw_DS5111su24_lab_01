@@ -14,13 +14,14 @@ logging.basicConfig(level = logging.INFO, stream = sys.stderr,
 log = logging.getLogger(__name__)
 
 url = 'https://www.gutenberg.org/cache/epub/17192/pg17192.txt'
-
-try:
-    with open('./pg17192.txt', 'r') as file:
-        the_raven = file.read()
-except:
-    response = requests.get(url)
-    the_raven = response.text
+response = requests.get(url)
+the_raven = response.text
+# try:
+#     with open('./pg17192.txt', 'r') as file:
+#         the_raven = file.read()
+# except:
+#     response = requests.get(url)
+#     the_raven = response.text
 
 
 def test_clean_text():
@@ -49,5 +50,5 @@ def test_clean_text():
     
 
 
-# if __name__ == '__main__':
-#     test_clean_text()
+if __name__ == '__main__':
+    test_clean_text()
