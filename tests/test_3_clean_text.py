@@ -1,5 +1,6 @@
 import os
 import logging, sys
+import requests
 
 relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
@@ -12,12 +13,15 @@ logging.basicConfig(level = logging.INFO, stream = sys.stderr,
 
 log = logging.getLogger(__name__)
 
-sys.path.append(relative_path)
-with open('pg17192.txt', 'r') as file:
-    the_raven = file.read()
+url = 'https://www.gutenberg.org/cache/epub/17192/pg17192.txt'
 
-# with open('https://www.gutenberg.org/cache/epub/17192/pg17192.txt', 'r') as file:
-#     the_raven = file.read()
+try:
+    with open('./pg17192.txt', 'r') as file:
+        the_raven = file.read()
+except:
+    response = requests.get(url)
+    the_raven = response.text
+
 
 def test_clean_text():
     """
@@ -45,5 +49,5 @@ def test_clean_text():
     
 
 
-if __name__ == '__main__':
-    test_clean_text()
+# if __name__ == '__main__':
+#     test_clean_text()
