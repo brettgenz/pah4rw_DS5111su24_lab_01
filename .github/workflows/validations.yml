@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.7"]
+        python-version: ["3.8, 3.10"]
 
     steps:
       - uses: actions/checkout@v4
@@ -28,4 +28,7 @@ jobs:
           pytest -vvx -m "not integration" tests/
       - name: Test integration tests with pytest
         run: |
-          pytest -vvx -m integration tests/ 
+          pytest -vvx -m integration tests/
+      - name: Test Python version
+        run: |
+          pytest -vvx tests/test_python_version.py

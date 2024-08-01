@@ -49,7 +49,3 @@ def test_bash_vs_python_functions():
     except AssertionError as e:
         log.info(f"Test failed: caught an assertion error with message: {e}")
 
-
-if __name__ == '__main__':
-
-    test_bash_vs_python_functions()
