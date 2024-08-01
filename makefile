@@ -57,4 +57,4 @@ total_words:
 	@bash total_words.sh	
 
 delete_texts:
-	@rm 10031-0.txt 1063.txt 932.txt pg14082.txt pg17192.txt
+	@rm 10031-0.txt* 1063.txt* 932.txt* pg14082.txt* pg17192.txt*
