@@ -9,8 +9,11 @@ update: env
 
 get_texts: book_Raven.txt book_FallHouseUsher.txt book_CaskAmontillado.txt book_Poems.txt book_LeCorbeau.txt
 
-test: get_texts
+test: # get_texts
 	. env/bin/activate; pytest -vvx -m "not integration" tests
+
+lint: test
+	. env/bin/activate; pylint src/data_prep.py
 
 book_Raven.txt:
 	@wget https://www.gutenberg.org/cache/epub/17192/pg17192.txt
