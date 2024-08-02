@@ -32,3 +32,6 @@ jobs:
       - name: Test Python version
         run: |
           pytest -vvx tests/test_python_version.py
+      - name: Lint code
+        run: |
+          pylint src/data_prep.py
