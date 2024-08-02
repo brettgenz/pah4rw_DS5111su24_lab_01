@@ -1,3 +1,5 @@
+"""This module provides functions for data cleaning, tokenizing, and counting words in text"""
+
 import string
 import logging
 import sys
