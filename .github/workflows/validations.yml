@@ -34,4 +34,4 @@ jobs:
           pytest -vvx tests/test_python_version.py
       - name: Lint code
         run: |
-          pylint src/data_prep.py
+          pylint src/pah4rw/data_prep.py
