@@ -6,7 +6,7 @@ from packaging.version import parse
 relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
-from pah4rw_DS5111su24_lab_01.data_prep import *
+from pah4rw.data_prep import *
 
 @pytest.mark.skip(reason="Unable to test German version of books yet")
 def test_count_words():
