@@ -4,7 +4,7 @@ import os, logging, sys
 relative_path = os.path.abspath('.')
 sys.path.append(relative_path)
 
-from data_prep import *
+from pah4rw_DS5111su24_lab_01.data_prep import *
 
 
 @pytest.mark.integration
